@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>student registration form</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<style>
+		body{
+      		/* for dark opacity */
+      		/* background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('images/app_img/background/image-analysis.png'); */
+			  background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.9) 100%), url('../images/app_img/background/pic2.jpeg');
+			  color: white;
+    	}
+		.pad {
+			padding-top: 35 px;
+		}
+	</style>
+</head>
+
+<body>
+	<!--nav bar-->
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+		  <a class="navbar-brand" href="../index.html">MTR-HOME</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+			aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarText">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item active">
+				  <a class="nav-link" href="../pages/shoppingItems.html">Go-Shopping<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="../pages/registrationForm.html">Registration</a>
+				</li>
+				<li class="nav-item">
+				  <a class="nav-link" href="../pages/protfolio.html">Protfolio</a>
+				</li>
+			  </ul>
+			<ul class="navbar-nav" style="float: right;">
+			  <li class="nav-item">
+				<a class="nav-link" href="../pages/signin.html"><i class="fas fa-user"></i> Sign In</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="../pages/login.html"><i class="fas fa-share-square"></i> Log In</a>
+			  </li>
+			</ul>
+		  </div>
+		</nav>
+	  </div>
+
+
+	<!--registraton form-->
+	<div class="container" style="margin-top: 100px; background-color: #252525; border-radius: 5px;">
+		<div class="row">
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<form action="#" method="POST" onsubmit="showInfo(); return false;">
+					<fieldset>
+						<legend style="float: left;">Student Registration Form Input</legend>
+						<div class="form-group">
+							<label for="studentRegistraton">Student Registration:</label>
+							<input type="number" class="form-control" id="student_registration"
+								name="studentRegistraton" placeholder="enter student's registration number" required />
+						</div>
+						<div class="form-group">
+							<label for="studentName">Student Name:</label>
+							<input type="text" class="form-control" id="student_name" name="studentName"
+								placeholder="enter student's name" required />
+						</div>
+						<div class="form-group">
+							<label for="studentEmail">Student Email:</label>
+							<input type="email" class="form-control" id="student_email" name="studentEmail"
+								placeholder="enter student's email address" required />
+						</div>
+						<div class="form-group">
+							<label for="studentDegree">Student Degree:</label>
+							<input type="checkbox" class="student-degree" value="JSC" /><span>JSC</span>
+							<input type="checkbox" class="student-degree" value="SSC" /><span>SSC</span>
+							<input type="checkbox" class="student-degree" value="HSC" /><span>HSC</span>
+							<input type="checkbox" class="student-degree" value="Honurs" /><span>Honurs</span>
+							<input type="checkbox" class="student-degree" value="Masters" /><span>Masters</span>
+						</div>
+						<div class="form-group">
+							<label for="studentGender">Student Gender:</label>
+							<input type="radio" name="studentGender" value="Male" /><span>Male</span>
+							<input type="radio" name="studentGender" value="female" /><span>Female</span>
+							<input type="radio" name="studentGender" value="Others" /><span>Others</span>
+						</div>
+						<div class="form-group">
+							<label for="studentDivision">Student Division:</label>
+							<select id="student_division" class="dropdown">
+								<option value="#" selected disabled>Select your division</option>
+								<option value="Dhaka">Dhaka</option>
+								<option value="Rajshahi">Rajshahi</option>
+								<option value="Rangpur">Rangpur</option>
+								<option value="Syhlet">Syhlet</option>
+								<option value="Barishal">Barishal</option>
+								<option value="Chittogram">Chittogram</option>
+							</select>
+
+						</div>
+					</fieldset>
+					<input type="submit" class="btn btn-primary" value="Submit">
+					<input type="reset" class="btn btn-secondary" value="Reset">
+					<br /><br/>
+				</form>
+			</div>
+			<div class="col-md-6 col-sm-6 col-xs-6">
+				<fieldset class="pad">
+					<legend>Student Registration Form Output</legend>
+					<div class="form-group" class="pad">
+						<label class="form-control" id="registration"></label>
+					</div>
+					<div class="form-group" class="pad">
+						<label class="form-control" id="name"></label>
+					</div>
+					<div class="form-group" class="pad">
+						<label class="form-control" id="email"></label>
+					</div>
+					<div class="form-group" class="pad">
+						<label class="form-control" id="degree"></label>
+					</div>
+					<div class="form-group" class="pad">
+						<label class="form-control" id="gender"></label>
+					</div>
+					<div class="form-group" class="pad">
+						<label class="form-control" id="division"></label>
+					</div>
+				</fieldset>
+			</div>
+		</div>
+	</div>
+
+
+	<script>
+		function showInfo() {
+			var studentRegistraton = document.getElementById("student_registration").value;
+			var studentName = document.getElementById("student_name").value;
+			var studentEmail = document.getElementById("student_email").value;
+			var elements = document.getElementsByClassName("student-degree");
+			var studentDegree = "";
+			for (var i = 0; i < elements.length; i++) {
+				if (elements[i].checked) {
+					studentDegree += elements[i].value + " ";
+				}
+			}
+			var studentGender = document.querySelector("input[name='studentGender']:checked").value;
+			var studentDivision = document.getElementById("student_division").value;
+
+			document.getElementById("registration").innerHTML = "Registration is: " + studentRegistraton;
+			document.getElementById("name").innerHTML = "Name is: " + studentName;
+			document.getElementById("email").innerHTML = "Email is: " + studentEmail;
+			document.getElementById("degree").innerHTML = "Cirtified with: " + studentDegree;
+			document.getElementById("gender").innerHTML = "Gender is: " + studentGender;
+			document.getElementById("division").innerHTML = "Division is: " + studentDivision;
+		}
+	</script>
+
+	<script src="../assets/js/bootstrap.jquery.js"></script>
+	<script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

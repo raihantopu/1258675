@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>log in</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<style>
+		body{
+      		/* for dark opacity */
+      		/* background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('images/app_img/background/image-analysis.png'); */
+			  background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.9) 100%), url('../images/app_img/background/pic1.jpeg');
+			  color: white;
+    	}
+		.pad {
+			padding-top: 35 px;
+		}
+	</style>
+</head>
+
+<body>
+	<!--nav bar-->
+	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top">
+		  <a class="navbar-brand" href="../index.html">MTR-HOME</a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+			aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../pages/shoppingItems.html">Go-Shopping<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/registrationForm.html">Registration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/protfolio.html">Protfolio</a>
+          </li>
+        </ul>
+			<ul class="navbar-nav" style="float: right;">
+			  <li class="nav-item">
+				<a class="nav-link" href="../pages/signin.html"><i class="fas fa-user"></i> Sign In</a>
+			  </li>
+			  <li class="nav-item">
+				<a class="nav-link" href="../pages/login.html"><i class="fas fa-share-square"></i> Log In</a>
+			  </li>
+			</ul>
+		  </div>
+		</nav>
+	  </div>
+
+      <div class="container" style="margin-top: 120px;">
+            <div class="col-md-3 col-sm-3 col-xs-3">
+
+            </div>
+            <div class="col-md-9 offset-md-3 ">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#signup">Sign Up</a></li>
+                    <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#login">Log In</a></li>
+                    <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#forgetpassword">Forget Password</a></li>
+                  </ul>
+                  <div class="tab-content">
+                        <div class="tab-pane" id="signup">
+                            <form action="#" method="POST">
+                                <div class="form-group">
+                                    <label for="signUsername" style="color: black;">Enter Your FullName</label>
+                                    <input type="text" class="form-control" name="signUsername" required id="sign_fullname"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="signEmail" style="color: black;">Enter Your Email</label>
+                                    <input type="email" class="form-control" name="signEmail" id="sign_email"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="signUsername" style="color: black;">Enter Your Username</label>
+                                    <input type="text" class="form-control" name="signUsername" id="sign_username"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="signPassword" style="color: black;">Enter Your password</label>
+                                    <input type="password" class="form-control" name="signPassword" required id="sign_password"/>
+                                </div>
+                                <input type="submit" class="btn btn-primary" value="Sign In" onclick="signUp()"/>
+                                <input type="reset" class="btn btn-secondary" value="Reset">
+                            </form>
+                        </div>
+                        <div class="tab-pane active" id="login">
+                            <form action="#" method="POST">
+                                <div class="form-group">
+                                    <label for="loginUsername" style="color: black;">Enter Your UserName</label>
+                                    <input type="text" class="form-control" name="loginUsername" required id="login_username" placeholder='use "admin" as username'>
+                                </div>
+                                <div class="form-group">
+                                    <label for="loginPassword" style="color: black;">Enter Your password</label>
+                                    <input type="password" class="form-control" name="loginPassword" required id="login_password" placeholder='use "admin" as password'/>
+                                </div>
+                                <input type="submit" class="btn btn-primary" value="Sign In"  onclick="logIn()"/>
+                                <input type="reset" class="btn btn-secondary" value="Reset">
+                            </form>
+                        </div>
+                        <div class="tab-pane" id="forgetpassword">
+                            <form action="#" method="POST">
+                                <div class="form-group">
+                                    <label for="forgetEmail" style="color: black;">Enter Your Registared Email</label>
+                                    <input type="email" class="form-control" name="forgetEmail" required id="forget_email"/>
+                                </div>
+                                <input type="submit" class="btn btn-primary" value="Submit"/>
+                                <input type="reset" class="btn btn-secondary" value="Reset">
+                            </form>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <script>
+          function signUp(){
+              var fullName = document.getElementById("sign_fullname").value;
+              var userEmail = document.getElementById("sign_email").value;
+              var userName = document.getElementById("sign_username").value;
+              var userPassword = document.getElementById("sign_password").value;
+            
+              alert("FullName: "+fullName+"\nEmail: "+userEmail+"\nUser Name: "+userName+"\nPassword: "+userPassword);
+             
+          }
+          function logIn(){
+              var userName = document.getElementById("login_username").value;
+              var password = document.getElementById("login_password").value;
+              if(userName == "admin" && password == "admin"){
+                  alert("success..your password matched.");
+              }else{
+                  alert("sorry!!! your password does not matched.");
+              }
+          }
+      </script>
+	<script src="../assets/js/bootstrap.jquery.js"></script>
+	<script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

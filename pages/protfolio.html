@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>my protfolio</title>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <style>
+    body {
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url('../images/app_img/background/pic2.jpeg');
+    }
+    #spice, #beef, #vegitables, #rice, #water{
+      margin-top: 10px;
+      margin-bottom: -10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light bg-info fixed-top">
+      <a class="navbar-brand" href="../index.html">MTR-HOME</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+        aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../pages/shoppingItems.html">Go-Shopping<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/registrationForm.html">Registration</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/protfolio.html">Protfolio</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav" style="float: right;">
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/signin.html"><i class="fas fa-user"></i> Sign In</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../pages/login.html"><i class="fas fa-share-square"></i> Log In</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container" style="margin-top: 50px;">
+    <div class="row">
+      <div class="col-md-2 col-sm-2 col-xs-2">
+        <!--Nav tabs-->
+        <ul class="nav nav-tabs" style="margin-top: 150px;">
+          <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#profile">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" data-toggle="tab" href="#experience">Experience</a></li>
+        </ul>
+      </div>
+      <div class="col-md-10 col-sm-10 col-xs-10" style="margin-top: 50px;">
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <!--for spice-->
+          <div class="tab-pane active container" id="profile">
+            <div class="row" style="color: white;">
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <h1><strong>Md. Topu Raihan</strong></h1>
+                    <h3><strong>ID: </strong>1258675</h3> 
+                    <h3><strong>Course: </strong>J2EE</h3>
+                    <h3><strong>TSP: </strong>The Computers System Limeted (TCLD).</h3>
+                    <p>
+                        I have completed my Honors and Masters from university of Dhaka.
+                        Now I am continuing my education with the  scholarship project lead by <strong>IsDB-BISEW</strong>.
+                        Where students get a chanch to overcome their bariers and build up
+                        a good carrier by <b>IT</b> training organised by this organization.
+                    </p>
+                </div>
+                <div class="col-md-6 col-sm-6 col-xs-6">
+                    <img src="../images/protfolio_img/18553.jpg" class="rounded" alt="image not found">
+                </div>
+            </div>
+          </div>
+          <!--for spice-->
+          <div class="tab-pane container" id="education">
+            <div class="row">
+                <table class="table" style="color: white;">
+                    <tr>
+                        <th>Serial</th>
+                        <th>Degree</th>
+                        <th>Organization</th>
+                        <th>Subject</th>
+                        <th>Passing Year</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>SSC</td>
+                        <td>Anupompur High School</td>
+                        <td>------</td>
+                        <td>2011</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>HSC</td>
+                        <td>Sardah Mohabiddaloy</td>
+                        <td>------</td>
+                        <td>2013</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>BA</td>
+                        <td>University of Dhaka</td>
+                        <td>Information Science and Library Management</td>
+                        <td>2018</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>MA</td>
+                        <td>University of Dhaka</td>
+                        <td>Information Science and Library Management</td>
+                        <td>2019</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>IT-Diploma</td>
+                        <td>IsDB-BISEW</td>
+                        <td>Software Development with (J2EE)</td>
+                        <td>Running</td>
+                    </tr>
+                </table>
+            </div>
+          </div>
+          <!--for spice-->
+          <div class="tab-pane container" id="experience">
+            <div class="row" style="color: white;">
+                <h3>Library Automation Projects in different organizaions</h3>
+                <div class="container">
+                    <ul>
+                        <li>IBA - University of Dhaka</li>
+                        <li>Alia Madrasa</li>
+                        <li>Notre Dame University</li>
+                    </ul> 
+                </div>
+                <h3>Different Techonologies</h3>
+                <div class="container">
+                    <ul>
+                        <li>able to handle servers</li>
+                        <li>expart in using Windows, Linux, MAC as well</li>
+                        <li>MS-OFFICE Application</li>
+                    </ul> 
+                </div>
+                <h3>Programming Languages</h3>
+                <div class="container">
+                    <ul>
+                        <li>C</li>
+                        <li>C++</li>
+                        <li>JAVA SE</li>
+                        <li>JAVA EE</li>
+                        <li>Database with MySql, Oracle, PostgreSQL etc</li>
+                    </ul> 
+                </div>
+                
+               
+            </div>
+          </div>
+         
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+
+  </script>
+  <script src="../assets/js/bootstrap.jquery.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
